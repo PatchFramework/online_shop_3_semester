@@ -1,24 +1,33 @@
+import React, {useState} from 'react';
+import {BrowserRouter, Route, NavLink, Switch} from 'react-router-dom';
+
+import Data from './Data/ShopItems.json';
+import Products from './Pages/Products';
+
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  // Save global data to make it accessable to all child processes
+  // Usually this data would come from a backendserver
+  const [data, setData] = useState(Data);
+  console.log(data);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Switch>
+          <Route
+            path="/"
+            exact
+            component={ () => <Products data={data} setData={setData} /> }
+          />
+          {/*
+          TODO: If CART and LOGIN (maybe a 404 page) components are created, they will be added with an according path here.
+          */}
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 

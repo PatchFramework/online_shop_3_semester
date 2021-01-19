@@ -1,0 +1,58 @@
+{"items":[
+    {
+        "id": 1,
+        "title": "Titel 1",
+        "text": "Schon 3 mal in den letzten 24h gekauft",
+        "footer": "Schon 3 mal in den letzten 24h gekauft",
+        "imgSrc": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+    },
+    {
+        "id": 2,
+        "title": "Test",
+        "text": "Sehr viel testender Text",
+        "footer": "Schon 3 mal in den letzten 24h gekauft und jetzt sofort bestellen für super Rabatte",
+        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+    },
+    {
+        "id": 3,
+        "title": "Everest Packet",
+        "text": "Sehr viel testender Text",
+        "footer": "Schon 3 mal Gehaschelt",
+        "imgSrc": "https://images.unsplash.com/photo-1539683255143-73a6b838b106?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80"
+    },
+    {
+        "id": 4,
+        "title": "Basyc",
+        "text": "Sehr viel testender Text",
+        "footer": "Schon 3 mal in den letzten 24h gekauft",
+        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+    },
+    {
+        "id": 5,
+        "title": "Test",
+        "text": "Sehr viel testender Text",
+        "footer": "Schon 3 mal in den letzten 24h gekauft",
+        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+    },
+    {
+        "id": 6,
+        "title": "Test",
+        "text": "Sehr viel testender Text",
+        "footer": "Schon 3 mal in den letzten 24h gekauft",
+        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+    },
+    {
+        "id": 7,
+        "title": "Test",
+        "text": "Sehr viel testender Text",
+        "footer": "Schon 3 mal in den letzten 24h gekauft",
+        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+    },
+    {
+        "id": 8,
+        "title": "Moin Meitser",
+        "text": "Wir verkaufen Lehrlinge keine Sklaven",
+        "footer": "Schon 3 mal in den letzten 24h gekauft",
+        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+    }
+]}

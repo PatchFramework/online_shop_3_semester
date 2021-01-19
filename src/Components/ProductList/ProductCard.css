@@ -1,0 +1,62 @@
+:root {
+    --cardMaxHeight: 400px
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    max-height: var(--cardMaxHeight);
+    box-sizing: border-box;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0.5rem;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.cardContainer:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(119, 119, 119, .164);
+    top: -6px;
+    cursor: pointer;
+}
+
+/* Stretch all direct children of the card container to fill the the card completely */
+.cardContainer > * {
+    flex: 1;
+}
+
+/* Make the images fill the width of the card and make its height a bit less,
+   then 50% of the whole cards height. Also perserve the aspect ratio of the pictures. */
+.cardImage {
+    width: 100%;
+    max-height: calc(var(--cardMaxHeight)/2 - 20px);
+    object-fit: cover;
+    align-self: center;
+    border-radius: 15px;
+}
+
+/* If the card is hovered also animate the image child */
+.cardContainer:hover .cardImage {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(34, 33, 33, .164);
+    top: -10px;
+}
+
+.cardTitle {
+    align-self: center;
+    font-weight: bold;
+    /*text-transform: uppercase;*/
+    padding: .5rem;
+}
+
+.cardBody {
+    padding: .7rem .8rem;
+}
+
+.cardFooter {
+    padding: .2rem .8rem;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background-color: rgba(0, 0, 0, .068);
+    color: rgba(0, 0, 0, .6);
+}
