@@ -17,7 +17,7 @@
 .cardContainer:hover {
     transition: 0.3s ease-in-out;
     box-shadow: 0px 4px 8px rgba(119, 119, 119, .164);
-    top: -6px;
+    transform: translateY(-2px);
     cursor: pointer;
 }
 
@@ -40,7 +40,7 @@
 .cardContainer:hover .cardImage {
     transition: 0.3s ease-in-out;
     box-shadow: 0px 4px 8px rgba(34, 33, 33, .164);
-    top: -10px;
+    transform: translateY(-1px);
 }
 
 .cardTitle {
