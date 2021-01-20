@@ -1,0 +1,126 @@
+:root {
+    /* Scale the navbar depending on the users display height */
+    --navbarHeight: calc(45px + 2vh);
+    --navbarMargin: 15px;
+    --logoGradient: linear-gradient(to bottom right, #2af598, #009efd);
+    /* Very high border radii result in a pill shape or a circle depending on the width
+       See also: https://stackoverflow.com/questions/18794947/capsule-shape-using-border-radius-without-a-set-width-or-height */
+    --pillBorderRadius: 200px;
+}
+
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--navbarHeight);
+    width: calc(100% - 2*var(--navbarMargin));
+    background: linear-gradient(45deg, rgb(213, 241, 255), rgb(183, 208, 218));
+    box-shadow: 0px 5px 6px rgba(34, 33, 33, .164);
+
+    border-radius: var(--pillBorderRadius);
+    margin: var(--navbarMargin);
+    overflow: hidden;
+}
+
+/* The different menues might get different css in the future */
+.leftMenu, .rightMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.logo {
+    height: 40px;
+    width: 60px;
+    padding: 0.1rem 0 0 1rem;
+}
+
+.logoText {
+    /* Add a very roundful font here ;) */
+    /* How to give text a gradient color: https://fossheim.io/writing/posts/css-text-gradient/ */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-image: var(--logoGradient);
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+.navItemLeftMenu {
+    padding: 0 1rem;
+}
+
+.navItemLeftMenuText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    height: 2rem;
+}
+
+/* The current nav item is highlighted with a pill */
+.navItemLeftMenu.active{
+    background-image: var(--logoGradient);
+    border-radius: var(--pillBorderRadius);
+    
+}
+
+.navItemRightMenu {
+    justify-content: center;
+    padding-left: 2rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+.loginText {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border: 1px solid white;
+    border-radius: 200px;
+    padding: 8px 14px;
+}
+
+.loginText:hover {
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-image: var(--logoGradient);
+}
+
+.loginLink:hover {
+    border-radius: var(--pillBorderRadius);
+    background-color: white;
+}
+
+.cartImg {
+    height: 40px;
+    width: 50px;
+    /* Change SVG color from black to white */
+    filter: invert(100%);
+}
+
+/* Styling for the element that overlaps the cart icon and shows the number of items in the cart */
+.numCartItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 20px;
+    top: -12px;
+    height: 1.2rem;
+    background-color: red;
+    border-radius: var(--pillBorderRadius);
+    padding: 1px 5px;
+    color: white;
+}
