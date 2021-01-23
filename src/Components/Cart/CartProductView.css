@@ -1,0 +1,70 @@
+.cartItemCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    width: 80vw;
+    overflow: hidden;
+    margin: 0.5rem;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 15px;
+}
+
+.cartItemImage {
+    height: 90%;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.cartItemDescription {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 10px;
+}
+
+.cartItemTitle {
+    font-weight: bold;
+    font-size: large;
+    margin: 0 20px;
+}
+
+.amountSpanContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 3%; 
+}
+
+.amountDescriber {
+    margin: auto;
+    align-self: center;
+    justify-content: center;
+}
+
+.amountCounterSpan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+.amountNum {
+    margin: 10px;
+    flex: 1;
+    font-size: larger;
+}
+
+.decreaseAmount, .increaseAmount {
+    border-radius: 200px;
+    width: 35px;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.322);
+    font-size: larger;
+    padding: 0 10px;
+}
