@@ -4,16 +4,19 @@ import ProductList from '../Components/ProductList/ProductList';
 
 const Products = (props) => {
     return (
-        <>
-            {/*TODO: Add NAVBAR here*/
-            console.log(props)}
+      <>
+        {/*TODO: Add NAVBAR here*/ console.log(props)}
 
-            <ProductList data={props.data} setData={props.setData} />
-            
-            {/*TODO: Add FOOTER here*/}
-        
-        </>
-    )
+        <ProductList
+          productData={props.productData}
+          setProductData={props.setProductData}
+          cartList={props.cartList}
+          setCartList={props.setCartList}
+        />
+
+        {/*TODO: Add FOOTER here*/}
+      </>
+    );
 }
 
-export default Products
+export default Products;

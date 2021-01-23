@@ -1,31 +1,31 @@
+.displayContainer {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
 .productsGrid {
     display: grid;
-    width: 100%;
+    max-width: 80%;
     grid-template-columns: 1fr;
     margin: 1rem;
 }
 
 /* Responsive scaling of layout */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1000px) {
     .productsGrid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1400px) {
     .productsGrid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (min-width: 1400px) {
-    .productsGrid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 @media screen and (min-width: 1700px) {
     .productsGrid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }

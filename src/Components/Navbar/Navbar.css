@@ -123,4 +123,5 @@
     border-radius: var(--pillBorderRadius);
     padding: 1px 5px;
     color: white;
+    z-index: 1;
 }

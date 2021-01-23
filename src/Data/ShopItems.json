@@ -1,58 +1,87 @@
 {"items":[
     {
+        "id": 0,
+        "title": "Tech Item with big name",
+        "text": "The best of the best, there is no tech that performes better",
+        "footer": "Hot right now",
+        "imgSrc": "https://images.unsplash.com/photo-1611270629569-948d94ca915a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
+    },
+    {
         "id": 1,
-        "title": "Titel 1",
-        "text": "Schon 3 mal in den letzten 24h gekauft",
-        "footer": "Schon 3 mal in den letzten 24h gekauft",
+        "title": "Matrix Poster",
+        "text": "The perfect present for every matrix fan out there",
+        "footer": "Sold 1002 times in the last week",
         "imgSrc": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
     },
     {
         "id": 2,
-        "title": "Test",
-        "text": "Sehr viel testender Text",
-        "footer": "Schon 3 mal in den letzten 24h gekauft und jetzt sofort bestellen für super Rabatte",
+        "title": "Camera Lense",
+        "text": "Is you want to see the world from a different perspective try this new lense",
+        "footer": "Lowest price we could find",
         "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
     },
     {
         "id": 3,
-        "title": "Everest Packet",
-        "text": "Sehr viel testender Text",
-        "footer": "Schon 3 mal Gehaschelt",
-        "imgSrc": "https://images.unsplash.com/photo-1539683255143-73a6b838b106?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80"
+        "title": "Pineapple X",
+        "text": "The latest and gratest Pineapple Phone. It's the best we have ever made",
+        "footer": "High amount of recomendation ",
+        "imgSrc": "https://images.unsplash.com/photo-1529088148495-2d9f231db829?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
     },
     {
         "id": 4,
-        "title": "Basyc",
-        "text": "Sehr viel testender Text",
-        "footer": "Schon 3 mal in den letzten 24h gekauft",
-        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+        "title": "Best Laptop for Coding",
+        "text": "This laptop is insanely powerfull, everthing you need as a programmer and even more ;)",
+        "footer": "Clicked 97 times in the last 24h",
+        "imgSrc": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80"
     },
     {
         "id": 5,
-        "title": "Test",
-        "text": "Sehr viel testender Text",
-        "footer": "Schon 3 mal in den letzten 24h gekauft",
-        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+        "title": "Terminalator",
+        "text": "Very cute, but it can hit hard and withstand high amount of damage",
+        "footer": "Most dangerous item we can offer",
+        "imgSrc": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
         "id": 6,
-        "title": "Test",
-        "text": "Sehr viel testender Text",
-        "footer": "Schon 3 mal in den letzten 24h gekauft",
-        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+        "title": "HDD",
+        "text": "Hold dem data a.k.a. Hard Disk Drive",
+        "footer": "",
+        "imgSrc": "https://images.unsplash.com/photo-1484662020986-75935d2ebc66?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
     },
     {
         "id": 7,
-        "title": "Test",
-        "text": "Sehr viel testender Text",
-        "footer": "Schon 3 mal in den letzten 24h gekauft",
-        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+        "title": "Shiny Smartphone",
+        "text": "Very Shiny, thats all you need to know",
+        "footer": "",
+        "imgSrc": "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     },
     {
         "id": 8,
-        "title": "Moin Meitser",
-        "text": "Wir verkaufen Lehrlinge keine Sklaven",
-        "footer": "Schon 3 mal in den letzten 24h gekauft",
-        "imgSrc": "https://images.unsplash.com/photo-1607669948575-4fd36b53e45e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80"
+        "title": "Drone",
+        "text": "This drone is very fast and agile, just like your colleagues from marketing ;)",
+        "footer": "",
+        "imgSrc": "https://images.unsplash.com/photo-1504890001746-a9a68eda46e2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1279&q=80"
+    },
+    {
+        "id": 9,
+        "title": "Selfie Stick",
+        "text": "Provides the best opportunity to hide a double chin. Hey. No judgement here.",
+        "footer": "",
+        "imgSrc": "https://images.unsplash.com/photo-1522860747050-bb0c1af38ae9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80"
+    },
+    {
+        "id": 10,
+        "title": "Typewriter",
+        "text": "If you love oldschool and vintage this is your way to go",
+        "footer": "Very intuitive to use",
+        "imgSrc": "https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=641&q=80"
+    },
+    {
+        "id": 11,
+        "title": "USB-C Cable",
+        "text": "Easy to store and compatible with most devices",
+        "footer": "",
+        "imgSrc": "https://images.unsplash.com/photo-1525972231415-e52a7a56c905?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
     }
+    
 ]}

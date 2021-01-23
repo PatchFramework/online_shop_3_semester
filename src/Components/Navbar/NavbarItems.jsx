@@ -1,5 +1,3 @@
-import React from 'react'
-
 const NavbarItems = [
     { text: "Products", urlPath: "/" },
     { text: "Cart", urlPath: "/cart" },

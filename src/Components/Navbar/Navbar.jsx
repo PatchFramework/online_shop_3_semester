@@ -6,7 +6,7 @@ import NavbarItems from './NavbarItems';
 import CartSvg from '../../Assets/shopping-basket-solid.svg';
 import Logo from '../../Assets/round.svg';
 
-const Navbar = () => {
+const Navbar = ({ cartList }) => {
   // Use location hook, to get the current URL path
   const location = useLocation();
   
@@ -45,7 +45,7 @@ const Navbar = () => {
             <Link to="/cart" className="link">
               <img className="cartImg" src={CartSvg} alt="cart" />
               {/* TODO: Render this div only if there is an item in the cart and update the number of items shown in the pill */}
-              <div className="numCartItems">10</div>
+              <div className="numCartItems">{cartList.length}</div>
             </Link>
           </li>
         </ul>

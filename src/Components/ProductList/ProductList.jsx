@@ -6,23 +6,24 @@ import ProductCard from './ProductCard'
 const ProductList = (props) => {
     console.log(props)
     return (
-      <div className="productsGrid">
-        {// Load the product items from the data and populate cards with them 
-        
-        props.data.items.map((item) => {
-          return (
-            <ProductCard
-              key={item.id}
-              className="card"
-              productId={item.id}
-              title={item.title}
-              text={item.text}
-              footer={item.footer}
-              imgSrc={item.imgSrc}
-              {...props}
-            />
-          );
-        })}
+      <div className="displayContainer">
+        <div className="productsGrid">
+          {
+            // Load the product items from the data and populate cards with them
+
+            props.productData.items.map((item) => {
+              return (
+                <ProductCard
+                  key={item.id}
+                  className="card"
+                  cartList={props.cartList}
+                  setCartList={props.setCartList}
+                  item={item}
+                />
+              );
+            })
+          }
+        </div>
       </div>
     );
 }
