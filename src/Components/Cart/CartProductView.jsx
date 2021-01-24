@@ -12,13 +12,14 @@ const CartProductView = ({ item, cartItems, setCartItems, increaseItemAmount, de
       <div className="cartItemDescription">
         <div className="cartItemTitle">{item.title}</div>
         <div className="cartItemText">{item.text}</div>
+        <div className="cartItemPrice">{item.price} €</div>
       </div>
 
       <span className="amountSpanContainer">
         <div className="amountDescriber"> Amount: </div>
         <span className="amountCounterSpan">
           <button
-            className="decreaseAmount"
+            className="decreaseAmount remove"
             onClick={() => decreaseItemAmount(item)}
           >
             -

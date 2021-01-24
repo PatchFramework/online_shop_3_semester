@@ -17,6 +17,7 @@ const ProductCard = ({ item, cartList, setCartList, addToCartHandler }) => {
       <img className="cardImage" src={item.imgSrc} alt="productImage" />
       <div className="cardTitle">{item.title}</div>
       {item.text && <div className="cardBody">{item.text}</div>}
+      <div className="price">{item.price} €</div>
       <button
         className="addToCart"
         onClick={() => addToCartHandler(item)}

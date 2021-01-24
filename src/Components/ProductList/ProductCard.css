@@ -1,5 +1,5 @@
 :root {
-    --cardMaxHeight: 400px
+    --cardMaxHeight: 500px
 }
 
 .cardContainer {
@@ -31,7 +31,7 @@
    then 50% of the whole cards height. Also perserve the aspect ratio of the pictures. */
 .cardImage {
     width: 100%;
-    max-height: calc(var(--cardMaxHeight)/2 - 20px);
+    height: calc(var(--cardMaxHeight)/2 - 20px);
     object-fit: cover;
     align-self: center;
     border-radius: 15px;
@@ -55,11 +55,21 @@
     padding: .7rem .8rem;
 }
 
+.price {
+    align-self: center;
+    padding: .3rem 0;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-image: var(--logoGradient);
+}
+
 .addToCart {
     align-self: center;
     border-radius: 200px;
     border: 1px solid lightgray;
-    background: linear-gradient(to bottom right, #2af59ab0, #009cfdb0);
+    background: var(--logoGradient);
     color: white;
     width: 60%;
     margin: 0.6rem 0;
