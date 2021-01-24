@@ -12,6 +12,7 @@ const Products = (props) => {
           setProductData={props.setProductData}
           cartList={props.cartList}
           setCartList={props.setCartList}
+          addToCartHandler={props.addToCartHandler}
         />
 
         {/*TODO: Add FOOTER here*/}

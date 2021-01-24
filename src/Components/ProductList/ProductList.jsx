@@ -18,6 +18,7 @@ const ProductList = (props) => {
                   className="card"
                   cartList={props.cartList}
                   setCartList={props.setCartList}
+                  addToCartHandler={props.addToCartHandler}
                   item={item}
                 />
               );

@@ -2,16 +2,7 @@ import React from "react";
 
 import "./CartProductView.css";
 
-const CartProductView = ({ item, cartItems, setCartItems }) => {
-  
-  // ############ Functions ############
-  const increseItemCount = () => {
-    // TODO: Add Option to decrease the amount of an item here
-  };
-
-  const decreseItemCount = () => {
-    // TODO: Add Option to increase the amount of an item here
-  };
+const CartProductView = ({ item, cartItems, setCartItems, increaseItemAmount, decreaseItemAmount }) => {
   
   // ############ Main ############
   return (
@@ -28,14 +19,14 @@ const CartProductView = ({ item, cartItems, setCartItems }) => {
         <span className="amountCounterSpan">
           <button
             className="decreaseAmount"
-            onClick={() => decreseItemCount()}
+            onClick={() => decreaseItemAmount(item)}
           >
             -
           </button>
-          <div className="amountNum"> 1 </div>
+          <div className="amountNum"> {item.amount} </div>
           <button
             className="increaseAmount"
-            onClick={() => increseItemCount()}
+            onClick={() => increaseItemAmount(item)}
           >
             +
           </button>

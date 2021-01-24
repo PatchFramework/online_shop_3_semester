@@ -11,10 +11,77 @@ function App() {
   // Save global data to make it accessable to all child processes
   // Usually this data would come from a backendserver
   const [productData, setProductData] = useState(productList);
+  // Save the items in the cart here
   const [cartList, setCartList] = useState([]);
+  // save a list of the product ids here. 
+  // It is used to keep track of the individual products and their position in cartList
+  const [prodIdsInCartList, setProdIdsInCartList] = useState([]);
+
+  // ########## Functions ##########
+  const increaseItemAmountInCart = (item) => {
+    // let prodIndex = prodIdsInCartList.indexOf(item.id);
+    // let newAmount = item.amount + 1;
+    // cartList[prodIndex] = {...item, amount: newAmount};
+    item.amount = item.amount + 1;
+    // Create a copy (call by value) of the updated cartList and update the state with the new list
+    setCartList([...cartList]) 
+  };
+
+  const decreaseItemAmountInCart = (item) => {
+    // TODO: Add Option to decrease the amount of an item here and delete it if it hits 0
+    item.amount = item.amount - 1;
+    
+    // delete an item if its amount is 0
+    if (item.amount <= 0 ){
+      let prodIndex = prodIdsInCartList.indexOf(item.id);
+      cartList.splice(prodIndex, 1); 
+      removeFromListOfProdIds(item);
+    }
+    // Create a copy (call by value) of the updated cartList and update the state with the new list
+    setCartList([...cartList]) 
+  };
+
+  const addToListOfProdIds = (item) => {
+    /* Set the list that contains all product ids in cartList */ 
+    prodIdsInCartList.push(item.id);
+    setProdIdsInCartList([...prodIdsInCartList]);
+  };
+
+  const removeFromListOfProdIds = (item) => {
+    let removeId = prodIdsInCartList.indexOf(item.id);
+    prodIdsInCartList.splice(removeId, 1);
+    setProdIdsInCartList([...prodIdsInCartList]);
+  }
+
+  
+  const addToCartHandler = (item) => {
+    /* Adds the item to the cartList and updates the state */
+
+    // If the productId is not in the cart, append that item to the cart list
+    var newCartList = []; // variable in function scope
+    let indexInCartList = prodIdsInCartList.indexOf(item.id);
+
+    if (indexInCartList === -1) { //This means that the id isn't in the cart list
+    let itemWithAmount = {...item, amount: 1};
+    newCartList = cartList.concat(itemWithAmount);
+    addToListOfProdIds(item);
+    } 
+    // If the productId is already in the cart, increase the amount of that item
+    else {
+      let increaseAmountItem = cartList[indexInCartList];
+      let newAmount = increaseAmountItem.amount + 1;
+      increaseAmountItem = {...increaseAmountItem, amount: newAmount}
+      // change the old item in cart with the updated item that holds the new amount
+      cartList[indexInCartList] = increaseAmountItem;
+      newCartList = cartList;
+    }
+    
+    setCartList(newCartList);
+  };
 
   console.log(productData);
 
+  // ########## Main ##########
   return (
     <>
       <BrowserRouter>
@@ -29,19 +96,25 @@ function App() {
                 setProductData={setProductData}
                 cartList={cartList}
                 setCartList={setCartList}
+                addToCartHandler={addToCartHandler}
               />
             )}
           />
           <Route
             path="/cart"
             exact
-            component={(props) => (
-              <Cart cartList={cartList} setCartList={setCartList} />
+            component={() => (
+              <Cart
+                cartList={cartList}
+                setCartList={setCartList}
+                increaseItemAmount={increaseItemAmountInCart}
+                decreaseItemAmount={decreaseItemAmountInCart}
+              />
             )}
           />
           <Route
             path="/:404"
-            component={() => (<h1>HTTP Error 404: Not found</h1>)}
+            component={() => <h1>HTTP Error 404: Not found</h1>}
           />
           {/*
           TODO: If CART and LOGIN (maybe a 404 page) components are created, they will be added with an according path here.
