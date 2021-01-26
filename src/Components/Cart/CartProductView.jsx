@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./CartProductView.css";
+import TrashCan from '../../Assets/trash-alt-regular.svg';
 
 const CartProductView = ({ item, cartItems, setCartItems, increaseItemAmount, decreaseItemAmount }) => {
   
@@ -19,10 +20,10 @@ const CartProductView = ({ item, cartItems, setCartItems, increaseItemAmount, de
         <div className="amountDescriber"> Amount: </div>
         <span className="amountCounterSpan">
           <button
-            className="decreaseAmount remove"
+            className="decreaseAmount"
             onClick={() => decreaseItemAmount(item)}
           >
-            -
+            {item.amount === 1 ? <img src={TrashCan} alt="Trash Can"/> : "-" }
           </button>
           <div className="amountNum"> {item.amount} </div>
           <button
