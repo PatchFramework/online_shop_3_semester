@@ -29,6 +29,7 @@
 .cartItemPrice {
     align-self: center;
     padding-top: .5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     background-clip: text;
     -webkit-text-fill-color: transparent; 

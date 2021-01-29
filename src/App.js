@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import productList from './Data/ShopItems.json';
-import Products from './Pages/Products';
+import ProductData from './Data/ShopItems.json';
+import ProductList from './Components/ProductList/ProductList';
 import Cart from './Components/Cart/Cart'
 import Navbar from './Components/Navbar/Navbar';
 import './App.css';
@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   // Save global data to make it accessable to all child processes
   // Usually this data would come from a backendserver
-  const [productData, setProductData] = useState(productList);
+  const [productData, setProductData] = useState(ProductData);
   // Save the items in the cart here
   const [cartList, setCartList] = useState([]);
   // save a list of the product ids here. 
@@ -19,16 +19,12 @@ function App() {
 
   // ########## Functions ##########
   const increaseItemAmountInCart = (item) => {
-    // let prodIndex = prodIdsInCartList.indexOf(item.id);
-    // let newAmount = item.amount + 1;
-    // cartList[prodIndex] = {...item, amount: newAmount};
     item.amount = item.amount + 1;
     // Create a copy (call by value) of the updated cartList and update the state with the new list
     setCartList([...cartList]) 
   };
 
   const decreaseItemAmountInCart = (item) => {
-    // TODO: Add Option to decrease the amount of an item here and delete it if it hits 0
     item.amount = item.amount - 1;
     
     // delete an item if its amount is 0
@@ -79,8 +75,6 @@ function App() {
     setCartList(newCartList);
   };
 
-  console.log(productData);
-
   // ########## Main ##########
   return (
     <>
@@ -91,7 +85,7 @@ function App() {
             path="/"
             exact
             component={() => (
-              <Products
+              <ProductList
                 productData={productData}
                 setProductData={setProductData}
                 cartList={cartList}
