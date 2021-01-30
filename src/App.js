@@ -70,7 +70,7 @@ function App() {
       increaseAmountItem = {...increaseAmountItem, amount: newAmount}
       // change the old item in cart with the updated item that holds the new amount
       cartList[indexInCartList] = increaseAmountItem;
-      newCartList = cartList;
+      newCartList = [...cartList];
     }
     
     setCartList(newCartList);
