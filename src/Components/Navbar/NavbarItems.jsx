@@ -1,7 +1,7 @@
 const NavbarItems = [
     { text: "Products", urlPath: "/" },
     { text: "Cart", urlPath: "/cart" },
-    { text: "About", urlPath: "/about" },
+    { text: "Credits", urlPath: "/credits" },
   ];
 
 export default NavbarItems;

@@ -5,6 +5,7 @@ import ProductData from './Data/ShopItems.json';
 import ProductList from './Components/ProductList/ProductList';
 import Cart from './Components/Cart/Cart'
 import Navbar from './Components/Navbar/Navbar';
+import Credits from './Components/Credits/Credits';
 import './App.css';
 
 function App() {
@@ -106,6 +107,13 @@ function App() {
               />
             )}
           />
+
+          <Route
+            path="/credits"
+            exact
+            component={Credits}
+          />
+
           <Route
             path="/:404"
             component={() => <h1>HTTP Error 404: Not found</h1>}
