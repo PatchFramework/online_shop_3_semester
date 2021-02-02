@@ -23,6 +23,20 @@ const Cart = ({
   
   // ########## Main ##########
 
+  const TotalAndCheckout = () => {
+    return (
+      <div className="grandTotalLayout">
+          <Link to="/checkout" className="checkoutLink link">
+            <div className="checkoutText">Checkout</div>
+          </Link>
+          <div className="grandTotal">
+            <div className="grandTotalDescriber">Grand total:</div>
+            <div className="grandTotalNumber">{calcTotalPrice(cartList)} €</div>
+          </div>
+        </div>
+    )
+  }
+
   return (
     <div className="cartListContainer">
 
@@ -33,17 +47,7 @@ const Cart = ({
         </div>
       )}
 
-      {cartList.length !== 0 && ( // Display the total value of the cart if there are items in the cart
-        <div className="grandTotalLayout">
-          <Link to="/checkout" className="checkoutLink link">
-            <div className="checkoutText">Checkout</div>
-          </Link>
-          <div className="grandTotal">
-            <div className="grandTotalDescriber">Grand total:</div>
-            <div className="grandTotalNumber">{calcTotalPrice(cartList)}</div>
-          </div>
-        </div>
-      )}
+      {cartList.length !== 0 && <TotalAndCheckout /> /* Display the total value of the cart if there are items in the cart */} 
 
       <ul className="cartList">
         {cartList.map((item) => {
@@ -63,17 +67,7 @@ const Cart = ({
         })}
       </ul>
 
-      {cartList.length >= 5 && ( // Display checkout and amount at the end of cart if there are many items in the list
-        <div className="grandTotalLayout">
-          <Link to="/checkout" className="checkoutLink link">
-            <div className="checkoutText">Checkout</div>
-          </Link>
-          <div className="grandTotal">
-            <div className="grandTotalDescriber">Grand total:</div>
-            <div className="grandTotalNumber">{calcTotalPrice(cartList)}</div>
-          </div>
-        </div>
-      )}
+      {cartList.length >= 5 && <TotalAndCheckout /> /* Display checkout and amount at the end of cart if there are many items in the list */}
       <br/>
     </div>
   );

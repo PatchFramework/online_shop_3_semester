@@ -6,6 +6,7 @@ import ProductList from './Components/ProductList/ProductList';
 import Cart from './Components/Cart/Cart'
 import Navbar from './Components/Navbar/Navbar';
 import Credits from './Components/Credits/Credits';
+import LoginForm from './Components/LoginForm/LoginForm'
 import './App.css';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
   // save a list of the product ids here. 
   // It is used to keep track of the individual products and their position in cartList
   const [prodIdsInCartList, setProdIdsInCartList] = useState([]);
+  // Save the customer data in case they dont check out immediately
+  const [customer, setCustomer] = useState({});
+
 
   // ########## Functions ##########
   const increaseItemAmountInCart = (item) => {
@@ -49,7 +53,6 @@ function App() {
     prodIdsInCartList.splice(removeId, 1);
     setProdIdsInCartList([...prodIdsInCartList]);
   }
-
   
   const addToCartHandler = (item) => {
     /* Adds the item to the cartList and updates the state */
@@ -72,7 +75,6 @@ function App() {
       cartList[indexInCartList] = increaseAmountItem;
       newCartList = [...cartList];
     }
-    
     setCartList(newCartList);
   };
 
@@ -95,6 +97,7 @@ function App() {
               />
             )}
           />
+
           <Route
             path="/cart"
             exact
@@ -109,18 +112,40 @@ function App() {
           />
 
           <Route
-            path="/credits"
+            path="/login"
             exact
-            component={Credits}
+            component={(props) => (
+              <LoginForm
+                customerData={customer}
+                setCustomerData={setCustomer}
+                cartList={cartList}
+                isCheckout={false}
+                {...props}
+              />
+            )}
           />
+
+          {cartList.length !== 0 && // Only make the checkout accessable if there are items in the cart
+          <Route
+            path="/checkout"
+            exact
+            component={(props) => (
+              <LoginForm
+                customerData={customer}
+                setCustomerData={setCustomer}
+                cartList={cartList}
+                isCheckout={true}
+                {...props}
+              />
+            )}
+          />}
+
+          <Route path="/credits" exact component={Credits} />
 
           <Route
             path="/:404"
             component={() => <h1>HTTP Error 404: Not found</h1>}
           />
-          {/*
-          TODO: If CART and LOGIN (maybe a 404 page) components are created, they will be added with an according path here.
-          */}
         </Switch>
       </BrowserRouter>
     </>

@@ -1,0 +1,93 @@
+.cartInformationLayout {
+    display: grid;
+    background: rgba(128, 128, 128, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgb(#607D8B);
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.cartPriceLayout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.cartPrice {
+    justify-self: end;
+}
+
+.cartDescriber {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.collapseToggleCartItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: none;
+}
+
+/* Arrow CSS: https://www.w3schools.com/howto/howto_css_arrows.asp */
+.arrow {
+    border: solid rgb(77, 77, 77);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 5px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);  
+}
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.cartPrice {
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-image: var(--logoGradient);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#cartItemsList {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+}
+
+.cartItemsLegend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cartListItem {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.cartItemsDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartItemsTotalPrice {
+    justify-self: end;
+}
+
+.cartItemsResult {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
