@@ -23,6 +23,23 @@
     grid-template-columns: auto;
 }
 
+.loginFormLayout input {
+    border: 1px solid rgb(126, 126, 126);
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.loginFormLayout input:required:valid {
+    border: 1px solid green;
+}
+
+.loginFormLayout input:required:focus {
+    border: 1px solid lightblue;
+}
+
+
 .formHeadlineLayout {
     grid-column: span 2;
 }
@@ -31,3 +48,30 @@
     margin: 30px 0px 5px 0;
 }
 
+.buttonLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.button {
+    background: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.cancel {
+    background: rgb(235, 235, 235);
+    border: 1px solid grey;
+}
+
+.submit {
+    background: #28a745;
+    color: #fff;
+    border: 1px solid #28a745;
+    padding: 0.7rem;
+}

@@ -11,12 +11,11 @@ export default class LoginForm extends Component {
                 ...props.customerData
             }
         };
-        this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
     // ######### Functions ##########
-    handleSubmit(e){
+    handleSubmit(){
         // Set customer data in super state
         this.props.setCustomerData(this.state.customer);
 
@@ -29,6 +28,10 @@ export default class LoginForm extends Component {
             console.log("logged in");
             this.props.history.push("/");
         }
+    }
+
+    handleCancel(){
+      this.props.history.push("/cart");
     }
 
     handleChange(e){
@@ -53,7 +56,7 @@ export default class LoginForm extends Component {
             {/* Only render information about the cart if we are about to checkout */}
             {this.props.isCheckout && <CartInformation {...this.props} />}
 
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={() => this.handleSubmit()}>
               <div className="loginFormLayout">
                 <div className="formHeadlineLayout">
                   <h4 className="formHeadline">General Information</h4>
@@ -85,7 +88,7 @@ export default class LoginForm extends Component {
                 <label>
                   E-Mail
                   <input
-                    type="text"
+                    type="email"
                     className="email"
                     name="email"
                     defaultValue={this.state.customer.email}
@@ -115,43 +118,48 @@ export default class LoginForm extends Component {
                     required
                   />
                 </label>
-                <div className="formHeadlineLayout">
-                  <h4 className="formHeadline">
-                    Payment (please don't enter real bank information)
-                  </h4>
-                  <hr className="formSection" />
-                </div>
-                <label>
-                  IBAN
-                  <input
-                    type="text"
-                    className="iban"
-                    name="iban"
-                    defaultValue={this.state.customer.iban}
-                    onChange={this.handleChange}
-                    required
-                  />
-                </label>
-                <label>
-                  BIC (Swift Code)
-                  <input
-                    type="text"
-                    className="bic"
-                    name="bic"
-                    defaultValue={this.state.customer.bic}
-                    onChange={this.handleChange}
-                    required
-                  />
-                </label>
 
-                <input
-                  type="submit"
-                  className="submit"
-                  value={this.props.isCheckout ? "Checkout" : "Login"}
-                />
+                { /* Show payment form only if the customer checks out */
+                this.props.isCheckout && (
+                  <>
+                    <div className="formHeadlineLayout">
+                      <h4 className="formHeadline">
+                        Payment (please don't enter real bank information)
+                      </h4>
+                      <hr className="formSection" />
+                    </div>
+                    <label>
+                      IBAN
+                      <input
+                        type="text"
+                        className="iban"
+                        name="iban"
+                        defaultValue={this.state.customer.iban}
+                        onChange={this.handleChange}
+                        required
+                      />
+                    </label>
+                    <label>
+                      BIC (Swift Code)
+                      <input
+                        type="text"
+                        className="bic"
+                        name="bic"
+                        defaultValue={this.state.customer.bic}
+                        onChange={this.handleChange}
+                        required
+                      />
+                    </label>
+                  </>
+                )}
+              </div>
+              <div className="buttonLayout">
+                <button className="button cancel" type="button" onClick={() => this.handleCancel()}>Cancel</button>
+                <button type="submit" className="button submit">
+                  {this.props.isCheckout ? "Confirm & Checkout" : "Login"}
+                </button>
               </div>
             </form>
-            {console.log(this.props.customerData)}
           </div>
         );
     }

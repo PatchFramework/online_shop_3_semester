@@ -42,8 +42,8 @@ const Cart = ({
 
       {cartList.length === 0 && ( // Show if the cart is empty
         <div className="noCartContentLayout">
-          <h1>There is nothing in here.</h1>
-          <h2> You can add items from the products page. </h2>
+          <h1>There is nothing in here.😅</h1>
+          <h2> You can add items from the products page.</h2>
         </div>
       )}
 

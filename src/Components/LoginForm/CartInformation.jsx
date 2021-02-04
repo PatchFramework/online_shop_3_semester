@@ -18,7 +18,7 @@ export default class CartInformation extends Component {
           array.forEach((item) => {
             price += item.amount * item.price;
           });
-          return price;
+          return price.toFixed(2);
         }
     }
 
@@ -85,7 +85,7 @@ export default class CartInformation extends Component {
                       <div className="cartItemsPrice">{item.price} €</div>
                     </div>
                     <div className="cartItemsTotalPrice">
-                      {item.amount * item.price} €
+                      {(item.amount * item.price).toFixed(2)} €
                     </div>
                   </div>
                 );

@@ -1,0 +1,12 @@
+.thanksLayout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thanksTitle {
+    font-size: 3rem;
+    font-weight: bold;
+}

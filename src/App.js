@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Credits from './Components/Credits/Credits';
 import LoginForm from './Components/LoginForm/LoginForm'
 import './App.css';
+import ThankYou from './Components/ThankYou/ThankYou';
 
 function App() {
   // Save global data to make it accessable to all child processes
@@ -20,6 +21,8 @@ function App() {
   const [prodIdsInCartList, setProdIdsInCartList] = useState([]);
   // Save the customer data in case they dont check out immediately
   const [customer, setCustomer] = useState({});
+  // Boolean that indicated if the navbar should be hidden
+  const [navbarIsVisible, setNavbarIsVisible] = useState(true);
 
 
   // ########## Functions ##########
@@ -82,18 +85,21 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar cartList={cartList} />
+
+        {navbarIsVisible && <Navbar cartList={cartList} />}
+
         <Switch>
           <Route
             path="/"
             exact
-            component={() => (
+            component={(props) => (
               <ProductList
                 productData={productData}
                 setProductData={setProductData}
                 cartList={cartList}
                 setCartList={setCartList}
                 addToCartHandler={addToCartHandler}
+                {...props}
               />
             )}
           />
@@ -101,12 +107,13 @@ function App() {
           <Route
             path="/cart"
             exact
-            component={() => (
+            component={(props) => (
               <Cart
                 cartList={cartList}
                 setCartList={setCartList}
                 increaseItemAmount={increaseItemAmountInCart}
                 decreaseItemAmount={decreaseItemAmountInCart}
+                {...props}
               />
             )}
           />
@@ -141,6 +148,24 @@ function App() {
           />}
 
           <Route path="/credits" exact component={Credits} />
+
+          <Route
+            path="/thankyou"
+            exact
+            component={(props) => (
+              <ThankYou
+                customer={customer}
+                setCustomerData={setCustomer}
+                cartList={cartList}
+                setCartList={setCartList}
+                prodIdsInCartList={prodIdsInCartList}
+                setProdIdsInCartList={setProdIdsInCartList}
+                navbarIsVisible={navbarIsVisible}
+                setNavbarIsVisible={setNavbarIsVisible}
+                {...props}
+              />
+            )}
+          />
 
           <Route
             path="/:404"
