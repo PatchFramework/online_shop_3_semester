@@ -74,15 +74,34 @@
     padding-left: 2rem;
 }
 
+.profileIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    background-color: white;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.profileInitials {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background-image: var(--logoGradient);
+}
+
 .link {
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 
-
-
-.loginText {
+.loginLogoutText {
     color: white;
     text-transform: uppercase;
     font-size: 1.1rem;
@@ -91,14 +110,15 @@
     padding: 8px 14px;
 }
 
-.loginText:hover {
+.loginLogoutText:hover {
     background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
     background-image: var(--logoGradient);
 }
 
-.loginLink:hover {
+.loginLogout:hover {
+    cursor: pointer;
     border-radius: var(--pillBorderRadius);
     background-color: white;
 }

@@ -85,8 +85,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-
-        {navbarIsVisible && <Navbar cartList={cartList} />}
+        {navbarIsVisible && (
+          <Navbar cartList={cartList} customer={customer} setCustomer={setCustomer} />
+        )}
 
         <Switch>
           <Route
@@ -132,20 +133,21 @@ function App() {
             )}
           />
 
-          {cartList.length !== 0 && // Only make the checkout accessable if there are items in the cart
-          <Route
-            path="/checkout"
-            exact
-            component={(props) => (
-              <LoginForm
-                customerData={customer}
-                setCustomerData={setCustomer}
-                cartList={cartList}
-                isCheckout={true}
-                {...props}
-              />
-            )}
-          />}
+          {cartList.length !== 0 && ( // Only make the checkout accessable if there are items in the cart
+            <Route
+              path="/checkout"
+              exact
+              component={(props) => (
+                <LoginForm
+                  customerData={customer}
+                  setCustomerData={setCustomer}
+                  cartList={cartList}
+                  isCheckout={true}
+                  {...props}
+                />
+              )}
+            />
+          )}
 
           <Route path="/credits" exact component={Credits} />
 
