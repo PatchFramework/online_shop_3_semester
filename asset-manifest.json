@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/web_shop_3_semester/static/css/main.373803fd.chunk.css",
-    "main.js": "/web_shop_3_semester/static/js/main.996aa605.chunk.js",
-    "main.js.map": "/web_shop_3_semester/static/js/main.996aa605.chunk.js.map",
-    "runtime-main.js": "/web_shop_3_semester/static/js/runtime-main.d160fc04.js",
-    "runtime-main.js.map": "/web_shop_3_semester/static/js/runtime-main.d160fc04.js.map",
-    "static/js/2.b1e2e5e8.chunk.js": "/web_shop_3_semester/static/js/2.b1e2e5e8.chunk.js",
-    "static/js/2.b1e2e5e8.chunk.js.map": "/web_shop_3_semester/static/js/2.b1e2e5e8.chunk.js.map",
-    "index.html": "/web_shop_3_semester/index.html",
-    "static/css/main.373803fd.chunk.css.map": "/web_shop_3_semester/static/css/main.373803fd.chunk.css.map",
-    "static/js/2.b1e2e5e8.chunk.js.LICENSE.txt": "/web_shop_3_semester/static/js/2.b1e2e5e8.chunk.js.LICENSE.txt",
-    "static/media/round.74739fdf.svg": "/web_shop_3_semester/static/media/round.74739fdf.svg",
-    "static/media/shopping-basket-solid.cd99bf60.svg": "/web_shop_3_semester/static/media/shopping-basket-solid.cd99bf60.svg",
-    "static/media/trash-alt-regular.705a001f.svg": "/web_shop_3_semester/static/media/trash-alt-regular.705a001f.svg"
+    "main.css": "/online_shop_3_semester/static/css/main.373803fd.chunk.css",
+    "main.js": "/online_shop_3_semester/static/js/main.996aa605.chunk.js",
+    "main.js.map": "/online_shop_3_semester/static/js/main.996aa605.chunk.js.map",
+    "runtime-main.js": "/online_shop_3_semester/static/js/runtime-main.48440a9c.js",
+    "runtime-main.js.map": "/online_shop_3_semester/static/js/runtime-main.48440a9c.js.map",
+    "static/js/2.b1e2e5e8.chunk.js": "/online_shop_3_semester/static/js/2.b1e2e5e8.chunk.js",
+    "static/js/2.b1e2e5e8.chunk.js.map": "/online_shop_3_semester/static/js/2.b1e2e5e8.chunk.js.map",
+    "index.html": "/online_shop_3_semester/index.html",
+    "static/css/main.373803fd.chunk.css.map": "/online_shop_3_semester/static/css/main.373803fd.chunk.css.map",
+    "static/js/2.b1e2e5e8.chunk.js.LICENSE.txt": "/online_shop_3_semester/static/js/2.b1e2e5e8.chunk.js.LICENSE.txt",
+    "static/media/round.74739fdf.svg": "/online_shop_3_semester/static/media/round.74739fdf.svg",
+    "static/media/shopping-basket-solid.cd99bf60.svg": "/online_shop_3_semester/static/media/shopping-basket-solid.cd99bf60.svg",
+    "static/media/trash-alt-regular.705a001f.svg": "/online_shop_3_semester/static/media/trash-alt-regular.705a001f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d160fc04.js",
+    "static/js/runtime-main.48440a9c.js",
     "static/js/2.b1e2e5e8.chunk.js",
     "static/css/main.373803fd.chunk.css",
     "static/js/main.996aa605.chunk.js"
