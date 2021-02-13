@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 
 import ProductData from './Data/ShopItems.json';
 import ProductList from './Components/ProductList/ProductList';
@@ -91,7 +91,11 @@ function App() {
     <>
       <BrowserRouter>
         {navbarIsVisible && ( // Check if the Navbar should be hidden or not
-          <Navbar cartList={cartList} customer={customer} setCustomer={setCustomer} />
+          <Navbar
+            cartList={cartList}
+            customer={customer}
+            setCustomer={setCustomer}
+          />
         )}
 
         <Switch>
@@ -172,6 +176,13 @@ function App() {
                 {...props}
               />
             )}
+          />
+
+          {/* This is the path github pages uses as an entry point. 
+              To use the website, the user is redirected to the usual homepage of the SPA */}
+          <Route
+            path="/online_shop_3_semester/"
+            component={() => <Redirect to="/" />}
           />
 
           <Route
