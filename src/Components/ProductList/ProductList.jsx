@@ -4,7 +4,7 @@ import './ProductList.css'
 import ProductCard from './ProductCard'
 
 const ProductList = (props) => {
-    console.log(props)
+    
     return (
       <div className="displayContainer">
         <div className="productsGrid">
