@@ -3,7 +3,7 @@ import React from "react";
 import "./CartProductView.css";
 import TrashCan from '../../Assets/trash-alt-regular.svg';
 
-const CartProductView = ({ item, cartItems, setCartItems, increaseItemAmount, decreaseItemAmount }) => {
+const CartProductView = ({ item, increaseItemAmount, decreaseItemAmount }) => {
   
   // ############ Main ############
   return (
@@ -13,7 +13,7 @@ const CartProductView = ({ item, cartItems, setCartItems, increaseItemAmount, de
       <div className="cartItemDescription">
         <div className="cartItemTitle">{item.title}</div>
         <div className="cartItemText">{item.text}</div>
-        <div className="cartItemPrice">{item.price} €</div>
+        <div className="cartItemPrice">{item.price.toFixed(2)} €</div>
       </div>
 
       <span className="amountSpanContainer">

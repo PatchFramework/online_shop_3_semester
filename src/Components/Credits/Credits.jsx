@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Credits.css";
 
-export const Credits = () => {
+const Credits = () => {
   return (
     <div className="creditsContainer">
       <h1 className="creditsHeading">Credit goes to:</h1>

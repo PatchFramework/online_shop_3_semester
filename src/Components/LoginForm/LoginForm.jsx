@@ -21,11 +21,9 @@ export default class LoginForm extends Component {
 
         if (this.props.isCheckout) {
             // redirect to thank you page
-            console.log("checked out");
             this.props.history.push("/thankyou")
         } else {
             // redirect to products page
-            console.log("logged in");
             this.props.history.push("/");
         }
     }

@@ -3,7 +3,7 @@ import React from "react";
 import "./ProductCard.css";
 
 // Using object destructuring on the props object for convenience
-const ProductCard = ({ item, cartList, setCartList, addToCartHandler }) => {
+const ProductCard = ({ item, addToCartHandler }) => {
   //########## Functions ##########
 
   
@@ -17,7 +17,7 @@ const ProductCard = ({ item, cartList, setCartList, addToCartHandler }) => {
       <img className="cardImage" src={item.imgSrc} alt="productImage" />
       <div className="cardTitle">{item.title}</div>
       {item.text && <div className="cardBody">{item.text}</div>}
-      <div className="price">{item.price} €</div>
+      <div className="price">{item.price.toFixed(2)} €</div>
       <button
         className="addToCart"
         onClick={() => addToCartHandler(item)}

@@ -16,8 +16,6 @@ const ProductList = (props) => {
                 <ProductCard
                   key={item.id}
                   className="card"
-                  cartList={props.cartList}
-                  setCartList={props.setCartList}
                   addToCartHandler={props.addToCartHandler}
                   item={item}
                 />
@@ -29,4 +27,4 @@ const ProductList = (props) => {
     );
 }
 
-export default ProductList
+export default ProductList;

@@ -1,7 +1,3 @@
-:root {
-    --cardMaxHeight: 500px
-}
-
 .cardContainer {
     display: flex;
     flex-direction: column;

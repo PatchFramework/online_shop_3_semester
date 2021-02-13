@@ -7,7 +7,7 @@
 .productsGrid {
     display: grid;
     max-width: 80%;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Only on tiny screens */
     margin: 1rem;
 }
 

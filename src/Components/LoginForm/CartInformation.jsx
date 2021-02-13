@@ -37,9 +37,8 @@ export default class CartInformation extends Component {
     handleToggle() {
         this.arrowCss = `arrow ${!this.state.toggleItems ? 'up' : 'down'}`
         let toggleList = document.getElementById("cartItemsList");
-        console.log(toggleList.style);
         
-        // toggle visibility of items list: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_animate
+        // How to toggle visibility of items in a list: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_animate
         if(toggleList.style.height){
             toggleList.style.height = null;
         } else {

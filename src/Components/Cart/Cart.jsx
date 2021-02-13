@@ -51,7 +51,6 @@ const Cart = ({
 
       <ul className="cartList">
         {cartList.map((item) => {
-          console.log(item);
 
           return (
             <li key={item.id} className="cartItem">

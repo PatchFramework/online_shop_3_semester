@@ -11,17 +11,22 @@ import './App.css';
 import ThankYou from './Components/ThankYou/ThankYou';
 
 function App() {
-  // Save global data to make it accessable to all child processes
-  // Usually this data would come from a backendserver
+
+  // Save data in state and make it accessable to all child processes via props
+  // Data about tht products. Usually this data would come from a backendserver.
   const [productData, setProductData] = useState(ProductData);
+
   // Save the items in the cart here
   const [cartList, setCartList] = useState([]);
-  // save a list of the product ids here. 
-  // It is used to keep track of the individual products and their position in cartList
+
+  // Save a list of the product ids here. 
+  // It is used to keep track of the individual products and their position in cartList.
   const [prodIdsInCartList, setProdIdsInCartList] = useState([]);
-  // Save the customer data in case they dont check out immediately
+
+  // Save the customer data after they login
   const [customer, setCustomer] = useState({});
-  // Boolean that indicated if the navbar should be hidden
+
+  // Boolean that indicates if the navbar should be hidden
   const [navbarIsVisible, setNavbarIsVisible] = useState(true);
 
 
@@ -34,7 +39,6 @@ function App() {
 
   const decreaseItemAmountInCart = (item) => {
     item.amount = item.amount - 1;
-    
     // delete an item if its amount is 0
     if (item.amount <= 0 ){
       let prodIndex = prodIdsInCartList.indexOf(item.id);
@@ -81,11 +85,12 @@ function App() {
     setCartList(newCartList);
   };
 
+
   // ########## Main ##########
   return (
     <>
       <BrowserRouter>
-        {navbarIsVisible && (
+        {navbarIsVisible && ( // Check if the Navbar should be hidden or not
           <Navbar cartList={cartList} customer={customer} setCustomer={setCustomer} />
         )}
 
