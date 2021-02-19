@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
+import React, { useState } from 'react';
+import {BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import ProductData from './Data/ShopItems.json';
 import ProductList from './Components/ProductList/ProductList';
@@ -29,6 +29,10 @@ function App() {
   // Boolean that indicates if the navbar should be hidden
   const [navbarIsVisible, setNavbarIsVisible] = useState(true);
 
+  /* If the website is hostet on github pages the entry path is not "/",
+   but rather the project name. If you use this code locally you can delete all 
+   occurences of entry path. */
+  const ENTRY_PATH = "/online_shop_3_semester"
 
   // ########## Functions ##########
   const increaseItemAmountInCart = (item) => {
@@ -95,12 +99,13 @@ function App() {
             cartList={cartList}
             customer={customer}
             setCustomer={setCustomer}
+            entryPathConst={ENTRY_PATH}
           />
         )}
 
         <Switch>
           <Route
-            path="/"
+            path={`${ENTRY_PATH}/`}
             exact
             component={(props) => (
               <ProductList
@@ -115,7 +120,7 @@ function App() {
           />
 
           <Route
-            path="/cart"
+            path={`${ENTRY_PATH}/cart`}
             exact
             component={(props) => (
               <Cart
@@ -129,7 +134,7 @@ function App() {
           />
 
           <Route
-            path="/login"
+            path={`${ENTRY_PATH}/login`}
             exact
             component={(props) => (
               <LoginForm
@@ -144,7 +149,7 @@ function App() {
 
           {cartList.length !== 0 && ( // Only make the checkout accessable if there are items in the cart
             <Route
-              path="/checkout"
+              path={`${ENTRY_PATH}/checkout`}
               exact
               component={(props) => (
                 <LoginForm
@@ -158,10 +163,10 @@ function App() {
             />
           )}
 
-          <Route path="/credits" exact component={Credits} />
+          <Route path={`${ENTRY_PATH}/credits`} exact component={Credits} />
 
           <Route
-            path="/thankyou"
+            path={`${ENTRY_PATH}/thankyou`}
             exact
             component={(props) => (
               <ThankYou
@@ -178,17 +183,27 @@ function App() {
             )}
           />
 
-          {/* This is the path github pages uses as an entry point. 
-              To use the website, the user is redirected to the usual homepage of the SPA */}
+
+          {/* Show 404 error if the path doesn't exist */}
           <Route
-            path="/online_shop_3_semester/"
-            component={() => <Redirect to="/" />}
+            path={`${ENTRY_PATH}/`}
+            component={(props) => <h1>HTTP Error 404: We didn't find {props.history.location.pathname}</h1>}
           />
 
+          {/* This is the usual entry path for react.
+              Github pages requires the entry path to be the repository name,
+              therefore, the user is redirected by using the defined entry path
+              that is specified in the ENTRY_PATH constant.
+              E.g. /cart -> /ENTRY_PATH/cart
+              */}
           <Route
-            path="/:404"
-            component={() => <h1>HTTP Error 404: Not found</h1>}
+            path="/"
+            component={(props) => {
+              let pathParam = props.history.location.pathname;
+              return <Redirect to={`${ENTRY_PATH}${pathParam}`} />;
+          }}
           />
+
         </Switch>
       </BrowserRouter>
     </>

@@ -6,7 +6,7 @@ import NavbarItems from './NavbarItems';
 import CartSvg from '../../Assets/shopping-basket-solid.svg';
 import Logo from '../../Assets/round.svg';
 
-const Navbar = ({ cartList, customer, setCustomer }) => {
+const Navbar = ({ cartList, customer, setCustomer, entryPathConst }) => {
   // ######## Functions ########
   // Use location hook, to get the current URL path
   const location = useLocation();
@@ -73,10 +73,9 @@ const Navbar = ({ cartList, customer, setCustomer }) => {
       {/* Menu on the left side of the Navbar; Data is dynamically loaded */}
       <ul className="leftMenu">
         {NavbarItems.map((item, ind) => {
+          let isUrlActive = `${entryPathConst}${item.urlPath}` == location.pathname;
           // Check which CSS classes apply for the navbar element
-          const cssClass = `navItemLeftMenu ${
-            item.urlPath === location.pathname ? `active` : ``
-          }`;
+          const cssClass = `navItemLeftMenu ${isUrlActive && `active`}`;
 
           return (
             // Add the 'active' CSS class to a nav item if it represents the current path
