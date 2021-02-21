@@ -18,12 +18,14 @@
         */
 
         //Save the path and slice first "/" away
-        const path = window.location.pathname.slice(1); 
+        const path = window.location.pathname;
         // Save the path, so it can be used later
         sessionStorage.setItem('path', path);
 
-        // Save the entry path to access the SPA
-        const entryPath = path.split('/')[0];
+        /* Save the entry path to access the SPA
+        The URL will be split like this:
+        /entryPath/param1/param2 -> 0: "", 1: "entryPath", 2: "param1", 3: "param2" */
+        const entryPath = path.split('/')[1];
         
         /* redirect to the SPA entry path, where the path
         will be applied from sessionStorage */
