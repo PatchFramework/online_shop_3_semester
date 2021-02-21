@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import {BrowserRouter, Redirect, Route, Switch, useHistory } from 'react-router-dom';
 
 import ProductData from './Data/ShopItems.json';
 import ProductList from './Components/ProductList/ProductList';
@@ -35,6 +35,17 @@ function App() {
   const ENTRY_PATH = "/online_shop_3_semester"
 
   // ########## Functions ##########
+
+  /* This function is only neccessary when the SPA is hostet on github pages
+    for further information on paths and github pages see 404.html in the public folder. */
+  const redirectWhenUsingGhPages = (routingProps) => {
+    if (sessionStorage.getItem('path')) {
+      let path = sessionStorage.getItem('path');
+      sessionStorage.removeItem('path');
+      return <Redirect to={path} />;
+    }
+  }
+
   const increaseItemAmountInCart = (item) => {
     item.amount = item.amount + 1;
     // Create a copy (call by value) of the updated cartList and update the state with the new list
@@ -94,6 +105,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      
+      {redirectWhenUsingGhPages()}
+
         {navbarIsVisible && ( // Check if the Navbar should be hidden or not
           <Navbar
             cartList={cartList}

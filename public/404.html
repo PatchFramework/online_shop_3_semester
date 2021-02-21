@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script>
+        /*
+        This 404 page is intended for a github pages SPA.
+        When hosting on Github pages the url is composeed like this: https://{username}.github.io/{repo_name}
+
+        Github pages searches for eny given url path in its dir for a corresponding html file.
+        E.g. Navigating to "https://patchframework.github.io/online_shop_3_semester/shop" will trigger 
+        github pages to search for a shop.html in its directory. 
+        With a single page application that is a big problem, because it only has one html file, the index.html, 
+        that can only be accessed at "https://{username}.github.io/{repo_name}". That means if a user hard refreshes
+        the website or tries to access a subdirectory like "/cart" directly they will get a 404 error from github pages.
+
+        Good for us, that github pages uses a 404.html if we provide it. This file will use the path that the user entered,
+        save that path and redirect the user to the entry path to the SPA, where the path will be applied to the SPA.
+        */
+
+        //Save the path and slice first "/" away
+        const path = window.location.pathname.slice(1); 
+        // Save the path, so it can be used later
+        sessionStorage.setItem('path', path);
+
+        // Save the entry path to access the SPA
+        const entryPath = path.split('/')[0];
+        
+        /* redirect to the SPA entry path, where the path
+        will be applied from sessionStorage */
+        window.location.replace(`/${entryPath}`);
+      </script>
+    </head>
+</html>
