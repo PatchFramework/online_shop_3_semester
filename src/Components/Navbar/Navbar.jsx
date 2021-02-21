@@ -66,14 +66,14 @@ const Navbar = ({ cartList, customer, setCustomer, entryPathConst }) => {
   return (
     <nav className="navbarContainer">
       <Link to="/" className="link">
-        <img className="logo" src={Logo} />
+        <img className="logo" alt="Round Logo" src={Logo} />
         <div className="logoText">Rounderful</div>
       </Link>
 
       {/* Menu on the left side of the Navbar; Data is dynamically loaded */}
       <ul className="leftMenu">
         {NavbarItems.map((item, ind) => {
-          let isUrlActive = `${entryPathConst}${item.urlPath}` == location.pathname;
+          let isUrlActive = `${entryPathConst}${item.urlPath}` === location.pathname;
           // Check which CSS classes apply for the navbar element
           const cssClass = `navItemLeftMenu ${isUrlActive && `active`}`;
 

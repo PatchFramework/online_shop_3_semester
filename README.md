@@ -1,4 +1,4 @@
-# Online Shop 3. Semester
+# Online Shop 3. Semester ([Link to repository](https://github.com/PatchFramework/online_shop_3_semester))
 Hi, I'm Dominic, a student at DHBW Mannheim university in Germany. 
 My study course is Business Information Systems with a focus on Data Science.
 This project is part of the Web-Programming course in my 3rd semester. 
@@ -42,3 +42,5 @@ If you want to run a local copy of this code you should follow these steps:
 5. Enjoy 😄
 
 Feel free to use the code for your own project. I would appreciate if you would credit me for the code I've contributed that way.
+
+([Link to repository](https://github.com/PatchFramework/online_shop_3_semester))

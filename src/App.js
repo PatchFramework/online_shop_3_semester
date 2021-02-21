@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {BrowserRouter, Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import {BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import ProductData from './Data/ShopItems.json';
 import ProductList from './Components/ProductList/ProductList';
